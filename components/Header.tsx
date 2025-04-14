@@ -1,7 +1,8 @@
-import { View, Text, Button } from "react-native";
+import { View, Text, Button, Pressable, StyleSheet } from "react-native";
 import { useFonts } from "expo-font";
 import { ThemedText } from "./ThemedText";
 import { Colors } from "@/constants/Colors";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function Header() {
   const getFormattedDate = (date = new Date()): string => {
@@ -9,16 +10,29 @@ export default function Header() {
       .toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
-        day: "2-digit",
+        day: "numeric",
       })
       .replace(",", "");
   };
   const today = getFormattedDate();
   return (
-    <View style={{borderColor:"yellow"}}>
-      <ThemedText variant="heading">header: heading</ThemedText>
-      <ThemedText variant="subheading">header: subheading</ThemedText>
-      <ThemedText>header: default</ThemedText>
+    <View
+      style={{
+        height: "12%",
+        justifyContent: "flex-end", //space-between if settings
+      }}
+    >
+      {/* <Pressable style={iconContainer.settingsContainer}>
+        <Ionicons name="settings-outline" size={24} />
+      </Pressable> */}
+      <ThemedText variant="heading">{today}</ThemedText>
     </View>
   );
 }
+const iconContainer = StyleSheet.create({
+  settingsContainer: {
+    alignSelf: "flex-end",
+    padding: 5,
+    margin: 5,
+  },
+});

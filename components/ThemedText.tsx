@@ -25,12 +25,12 @@ export function ThemedText({
 
 const styles = StyleSheet.create({
   default: {
-    fontSize: 24,
-    lineHeight: 30,
+    fontSize: 20,
+    lineHeight: 24,
   },
   heading: {
-    fontSize: 48,
-    lineHeight: 52,
+    fontSize: 38,
+    lineHeight: 40,
 
     // iOS
     shadowColor: "#000",
@@ -42,8 +42,8 @@ const styles = StyleSheet.create({
     elevation: 6,
   },
   subheading: {
-    fontSize: 34,
-    lineHeight: 36,
+    fontSize: 24,
+    lineHeight: 32,
   },
   // link: {
   //   lineHeight: 30,
