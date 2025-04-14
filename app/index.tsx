@@ -1,4 +1,8 @@
+import Header from "../components/Header";
 import { Text, View } from "react-native";
+import Calendar from "./calendar";
+import { HelloWave } from "@/components/HelloWave";
+import { ThemedText } from "@/components/ThemedText";
 
 export default function Index() {
   return (
@@ -9,10 +13,8 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen. WOOOHOOOOOO SETUP YES</Text>
-      <Text>HELLO WORLD</Text>
-      <Text>HELLO WORLD</Text>
-      <Text>HELLO WORLD</Text>
+      <Header />
+      <ThemedText>body</ThemedText>
     </View>
   );
 }

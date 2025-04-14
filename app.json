@@ -28,7 +28,12 @@
     },
     "plugins": [
       "expo-router",
-      "expo-font"
+      [
+        "expo-font",
+        {
+          "fonts": ["./assets/fonts/SingleDay-Regular.ttf"]
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

@@ -1,3 +1,9 @@
+import { View, Text } from "react-native";
+
 export default function Audio() {
-  return <> audio page </>;
+  return (
+    <View>
+      <Text>Audio</Text>
+    </View>
+  );
 }
